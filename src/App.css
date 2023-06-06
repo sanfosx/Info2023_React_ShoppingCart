@@ -1,0 +1,34 @@
+
+html, body {
+  height: 98%;
+  margin: 0;
+  padding:0;
+  background-color: black;
+  color: white;
+}
+
+.app-container {
+  display: flex;
+  height: 100%;
+ 
+  
+}
+
+aside {
+  
+  width: 30%;
+ 
+}
+
+main {
+  
+  width: 70%;
+  overflow-y:auto;
+}
+
+.borderes{
+  border: 1px solid white;
+  margin: 1rem 1rem;
+  border-radius: 10px;
+
+}
