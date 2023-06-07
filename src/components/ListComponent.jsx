@@ -83,6 +83,8 @@ const ListComponent = ({ products }) => {
         {/*eslint-disable-next-line react/prop-types*/}
         {products.map((product) => {
           const inCart = shoppingCart.some((item) => item.id === product.id);
+
+          return (
             <div className={`card-content borderes ${inCart ? 'in-cart' : ''}`} key={product.id}>
               {inCart ? (
                 // Mostrar la información del producto en el carrito
@@ -120,7 +122,7 @@ const ListComponent = ({ products }) => {
                 </button>
               )}
             </div>
-          ;
+          );
         })}
       </div>
     </div>
