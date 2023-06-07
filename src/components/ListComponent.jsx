@@ -4,7 +4,15 @@ import { RiShoppingCartLine } from 'react-icons/ri';
 // eslint-disable-next-line react/prop-types
 const ListComponent = ({ products }) => {
   const [productQuantity, setProductQuantity] = useState({});
-  const [shoppingCart, setShoppingCart] = useState([]);
+
+  const [shoppingCart, setShoppingCart] = useState(() => {
+    const cartData = localStorage.getItem('shoppingCart');
+    if (cartData) {
+      return JSON.parse(cartData);
+    } else {
+      return [];
+    }
+  });
 
   // Incrementar la cantidad del producto
   const incrementQuantity = (productId) => {
@@ -56,17 +64,13 @@ const ListComponent = ({ products }) => {
   useEffect(() => {
     // Guardar el carrito en localStorage cuando se actualiza
     localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+    console.log(shoppingCart);
   }, [shoppingCart]);
 
   // Calcular el precio total del carrito
   const totalPrice = shoppingCart.reduce((total, item) => {
     return total + item.price * item.cant;
   }, 0);
-
-  /* Calcular la cantidad total de productos en el carrito
-  const totalQuantity = shoppingCart.reduce((total, item) => {
-    return total + (item.cant || 0);
-  }, 0);*/
 
   return (
     <div className="list-container">
@@ -115,12 +119,6 @@ const ListComponent = ({ products }) => {
                   </button>
                 </>
               )}
-
-              {inCart && (
-                <button className="btn-remove" onClick={() => removeFromCart(product.id)}>
-                  Quitar del carrito
-                </button>
-              )}
             </div>
           );
         })}
@@ -130,4 +128,5 @@ const ListComponent = ({ products }) => {
 };
 
 export default ListComponent;
+
 
