@@ -10,19 +10,14 @@ body {
 .app-container {
   display: flex;
   height: 100%;
-
-
 }
 
 aside {
-
   width: 25%;
-
 }
 
 main {
   width: 75%;
-
 }
 
 .borderes {
@@ -32,7 +27,9 @@ main {
 
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
   text-align: center;
 }
 
@@ -44,7 +41,6 @@ h1, h2, h3{
 }
 
 .list-tittle {
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,13 +56,12 @@ h1, h2, h3{
   justify-content: space-between;
 }
 
-.cart-info button{
+.cart-info button {
   width: 50px;
   height: 50px;
   font-size: xx-large;
   border-radius: 50px;
 }
-
 
 .list-content {
   display: flex;
@@ -77,70 +72,64 @@ h1, h2, h3{
 
 /* Estilos para la barra de desplazamiento */
 .list-content::-webkit-scrollbar {
-  width: 6px; /* Ancho de la barra de desplazamiento */
+  width: 6px;
+  /* Ancho de la barra de desplazamiento */
 }
 
 .list-content::-webkit-scrollbar-track {
-  background-color: black; /* Color del fondo de la barra de desplazamiento */
+  background-color: black;
+  /* Color del fondo de la barra de desplazamiento */
 }
 
 .list-content::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color del agarre de la barra de desplazamiento */
+  background-color: #888;
+  /* Color del agarre de la barra de desplazamiento */
 }
 
 .list-content::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Color del agarre de la barra de desplazamiento al pasar el cursor */
+  background-color: #555;
+  /* Color del agarre de la barra de desplazamiento al pasar el cursor */
 }
-
-
-
 
 .card {
   display: flex;
   flex-direction: column;
-
 }
 
 .card-tittle {
   display: flex;
-
   justify-content: space-between;
 }
 
 .card-content {
- max-width: 11rem;
+  max-width: 11rem;
   margin: 1rem;
   padding: 1rem;
   align-items: center;
 }
 
-.card-content p, h2{
+.card-content p,
+h2 {
   min-width: 11rem;
   overflow-wrap: break-word;
-  
 }
-
 
 .btn-logic {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-
 }
 
-.btn-logic button{
-
- padding: 0.5rem;
- width: 30px;
- background-color: black;
- color: white;
- margin-bottom: 0;
- align-content: center;
+.btn-logic button {
+  padding: 0.5rem;
+  width: 30px;
+  background-color: black;
+  color: white;
+  margin-bottom: 0;
+  align-content: center;
 }
-
 
 /*FORM*/
-
 .form-container {
   display: flex;
   flex-direction: column;
@@ -153,7 +142,8 @@ h1, h2, h3{
   flex-direction: column;
 }
 
-.form-input input, textarea {
+.form-input input,
+textarea {
   padding: 0.5rem 1rem;
   background-color: black;
   color: white;
@@ -161,19 +151,20 @@ h1, h2, h3{
   max-width: 90%;
 }
 
-.form-input label{
+.form-input label {
   margin-top: 0.3rem;
 }
+
 .form-container button {
-  padding:  0.7rem;
+  padding: 0.7rem;
   background-color: black;
   color: white;
   width: 90%;
-  align-self:flex-end;
+  align-self: flex-end;
 }
 
-.btn-add{
-  padding:  0.7rem;
+.btn-add {
+  padding: 0.7rem;
   width: 9rem;
   background-color: black;
   color: white;
