@@ -12,6 +12,7 @@ const FormComponent =({ addProduct}) => {
 
         // Generar un ID único para el producto
         const productId = Date.now().toString();
+        const cant = 1
 
         // Crear un objeto con los datos del producto
         const newProduct = {
@@ -19,6 +20,7 @@ const FormComponent =({ addProduct}) => {
             name: productName,
             description: productDescription,
             price: productPrice,
+            cant: cant,
         };
 
         // Llamar a la función de agregar producto del componente padre
@@ -32,7 +34,7 @@ const FormComponent =({ addProduct}) => {
 
     return (
         <div className="form-container">
-            <h2>Cargar Productos</h2>
+            <h1>Cargar Productos</h1>
             <form onSubmit={handleFormSubmit}>
                 <div className="form-input">
                     <input
@@ -43,12 +45,12 @@ const FormComponent =({ addProduct}) => {
                         required
                     />
                     <label htmlFor="productName" className="form-label">
-                        Nombre:
+                        Nombre
                     </label>
                 </div>
 
                 <div className="form-input">
-                    <input
+                    <textarea
                         type="text"
                         id="productDescription"
                         value={productDescription}
@@ -73,7 +75,7 @@ const FormComponent =({ addProduct}) => {
                     </label>
                 </div>
 
-                <button type="submit">Agregar Producto</button>
+                <button className="borderes" type="submit">Agregar Producto</button>
             </form>
         </div>
     )

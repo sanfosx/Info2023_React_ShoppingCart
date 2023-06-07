@@ -1,8 +1,8 @@
-
-html, body {
+html,
+body {
   height: 98%;
   margin: 0;
-  padding:0;
+  padding: 0;
   background-color: black;
   color: white;
 }
@@ -10,25 +10,151 @@ html, body {
 .app-container {
   display: flex;
   height: 100%;
- 
-  
+
+
 }
 
 aside {
-  
-  width: 30%;
- 
+
+  width: 25%;
+
 }
 
 main {
-  
-  width: 70%;
-  overflow-y:auto;
+  width: 75%;
+
 }
 
-.borderes{
+.borderes {
   border: 1px solid white;
   margin: 1rem 1rem;
   border-radius: 10px;
 
+}
+
+h1, h2, h3{
+  text-align: center;
+}
+
+/*LIST */
+.list-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.list-tittle {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.cart-info {
+  width: 100px;
+  margin-left: 1rem;
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-info button{
+  width: 50px;
+  height: 50px;
+  font-size: xx-large;
+  border-radius: 50px;
+}
+
+
+.list-content {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  align-items: center;
+
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.card-tittle {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.card-content {
+ max-width: 11rem;
+  margin: 1rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.card-content p, h2{
+  max-width: 11rem;
+  overflow-wrap: break-word;
+}
+
+
+.btn-logic {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.btn-logic button{
+ padding: 0.5rem;
+ width: 30px;
+ background-color: black;
+ color: white;
+ margin-bottom: 0;
+ align-content: center;
+}
+/*FORM*/
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.form-input {
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input input, textarea {
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  max-width: 90%;
+}
+
+.form-input label{
+  margin-top: 0.3rem;
+}
+.form-container button {
+  padding:  0.7rem;
+  background-color: black;
+  color: white;
+  width: 90%;
+  align-self:flex-end;
+}
+
+.btn-add{
+  padding:  0.7rem;
+  width: 9rem;
+  background-color: black;
+  color: white;
+  margin-bottom: 0;
+  align-content: center;
 }
